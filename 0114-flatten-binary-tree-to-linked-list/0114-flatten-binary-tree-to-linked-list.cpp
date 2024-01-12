@@ -11,8 +11,9 @@
  */
 class Solution {
 public:
+    TreeNode* prev=NULL;
     void flatten(TreeNode* root) {
-        TreeNode* cur=root;
+       /* TreeNode* cur=root;
         TreeNode* prev=NULL;
         while(cur!=NULL){
             if(cur->left!=NULL){
@@ -25,8 +26,18 @@ public:
                 cur->left=NULL;
                 
             }
-            cur=cur->right;
+            cur=cur->right;*/
+       // TreeNode *prev=NULL;
+        if(root==NULL)return;
+        flatten(root->right);
+        flatten(root->left);
+        root->right=prev;
+        root->left=NULL;
+        prev=root;
+            
+            
         }
         
-    }
+        
+    
 };
