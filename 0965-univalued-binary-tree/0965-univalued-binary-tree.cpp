@@ -17,7 +17,7 @@ public:
         }
         if(root->val!=value){
            ans=false;
-           return;
+           
         }
          solve(value,root->left,ans);
          solve(value,root->right,ans);
