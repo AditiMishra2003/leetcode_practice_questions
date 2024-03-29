@@ -5,7 +5,7 @@ public:
         long long substring=0;
         for(char &ch:s){
             if(ch==c){
-               substring+=(1+count);
+               substring=substring+(1+count);
                count++;
             }
         }
