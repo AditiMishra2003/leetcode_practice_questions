@@ -11,7 +11,7 @@ public:
     // Helper function to invert a string
     string invert(string s) {
         string inv = "";
-        for (auto c : s) {
+        for (auto c:s) {
             if (c == '0') inv += '1';
             else inv += '0';
         }
