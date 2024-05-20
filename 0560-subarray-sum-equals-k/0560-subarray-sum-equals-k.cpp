@@ -4,14 +4,15 @@ public:
         int sum=0;
         int count =0;
         for(int i=0;i<nums.size();i++){
-            sum=nums[i];
-            if(sum==k)count++;
-            for(int j=i+1;j<nums.size();j++){
-                sum+=nums[j];
-                if(sum==k)count++;
+            int ans=0;
+            sum=0;
+            for(int j=i;j<nums.size();j++){
+                sum=sum+nums[j];
+                if(sum==k){
+                    count++;
+                }
             }
         }
-        return count;
-            
+         return count;   
     }
 };
